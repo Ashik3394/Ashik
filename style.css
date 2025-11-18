@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f6f6f6;
+}
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.product {
+  background: #fff;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 0 10px #ddd;
+}
+
+
+.product-img {
+    width: 250px;      /* fixed width */
+    height: 250px;     /* fixed height */
+    object-fit: contain; /* crop nicely */
+    border-radius: 8px; /* optional styling */
+}
+
+
+/* Hidden by default */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* When visible */
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth hover effect for product cards */
+.product-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+}
+
+.product-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+}
+
+button:hover {
+  background-color: orange;
+}
+
+/* Card hover / lift effect for desktop */
+.product-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+}
+
+.product-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Touch animation for mobile / touchscreen */
+.product-hover:active {
+  transform: translateY(-4px) scale(0.98);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
